@@ -16,7 +16,11 @@ public class StockDto {
 
   private double atr20;
 
+  private double n20;
+
   private double atr250;
+
+  private double n250;
 
   private int status;
 
@@ -30,7 +34,9 @@ public class StockDto {
     sb.append(", max20Price=").append(max20Price);
     sb.append(", min10Price=").append(min10Price);
     sb.append(", atr20=").append(atr20);
+    sb.append(", n20=").append(n20);
     sb.append(", atr250=").append(atr250);
+    sb.append(", n250=").append(n250);
     sb.append(", status=").append(status);
     sb.append('}');
     return sb.toString();
@@ -92,12 +98,28 @@ public class StockDto {
     this.atr20 = atr20;
   }
 
+  public double getN20() {
+    return n20;
+  }
+
+  public void setN20(double n20) {
+    this.n20 = n20;
+  }
+
   public double getAtr250() {
     return atr250;
   }
 
   public void setAtr250(double atr250) {
     this.atr250 = atr250;
+  }
+
+  public double getN250() {
+    return n250;
+  }
+
+  public void setN250(double n250) {
+    this.n250 = n250;
   }
 
   public int getStatus() {

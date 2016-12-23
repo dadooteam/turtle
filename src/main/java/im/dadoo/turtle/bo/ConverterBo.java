@@ -27,7 +27,11 @@ public class ConverterBo {
         String data = matcher.group(1);
         List<String> temp = Splitter.on(",").splitToList(data);
         r.setName(temp.get(0));
+        r.setOpen(NumberUtils.toDouble(temp.get(1)));
         r.setPrice(NumberUtils.toDouble(temp.get(3)));
+        r.setLastClose(NumberUtils.toDouble(temp.get(2)));
+        r.setHigh(NumberUtils.toDouble(temp.get(4)));
+        r.setLow(NumberUtils.toDouble(temp.get(5)));
         r.setTime(String.format("%sT%s", temp.get(temp.size() - 3), temp.get(temp.size() - 2)));
       }
     }

@@ -29,9 +29,6 @@ public class HelloController {
   @RequestMapping(value = "/hello", method = RequestMethod.GET)
   @ResponseBody
   public Object hello(HttpServletRequest request, HttpServletResponse response) throws Exception {
-    String sina = this.quoteCo.quote("sh601003");
-
-    QuoteDto r = this.converterBo.toQuoteDto("sh601003", Constant.MARKET_CN, sina);
-    return r;
+    return "hello";
   }
 }
